@@ -1,0 +1,26 @@
+.list-group-item {
+  line-height: 2.5;
+}
+body {
+  background-image: url(bck.jpg);
+  background-size: 1450px;
+}
+h1 {
+  text-align: center;
+  color: aliceblue;
+}
+label {
+  color: aliceblue;
+}
+#home {
+  margin: 60px;
+  float: right;
+  width: 600px;
+}
+nav {
+  background-image: url(bck.jpg);
+}
+/* .container {
+  height: 00px;
+  width: 500px;
+} */
