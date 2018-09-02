@@ -1,0 +1,90 @@
+<nav class="navbar navbar-expand-lg bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/lawyers">Find A LAWYER</a>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">ASK A QUESTION</a>
+            </li>
+        </ul>
+        <a class="btn btn-warning" data-toggle="collapse" href="/lawyers/register" role="button" aria-expanded="false" aria-controls="collapseExample">
+            User Login
+        </a>
+        <button type="button" class="btn btn-danger">Im A Lawyer</button>
+    </div>
+</nav>
+
+
+<div id="home">
+    <div class="container">
+        <div class="row">
+            <div class="col-8 offset-2">
+
+                <h4>Get Added to Directory</h4>
+
+                <div id="errors">
+                    <p>Errors:</p>
+                </div>
+
+                <form class="clearfix mb-4" action="POST" , "GET">
+                    <div class="form-group">
+                        <label for="example-text">Name</label>
+                        <input type="text" id="lawyerName" class="form-control" aria-describedby="example-text" placeholder="Full Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="example-description">Type</label>
+                        <textarea class="form-control" id="type" aria-describedby="example-description" placeholder="What Do You Specialize In?"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="example-text">ZipCode</label>
+                        <input type="text" id="zipCode" class="form-control" aria-describedby="example-text" placeholder="00000">
+                    </div>
+                    <div class="form-group">
+                        <label for="example-text">Phone Number</label>
+                        <input type="text" id="phoneNumber" class="form-control" aria-describedby="example-text" placeholder="(111)999-8888">
+                    </div>
+                    <div class="form-group">
+                        <label for="example-text">State</label>
+                        <input type="text" id="State" class="form-control" aria-describedby="example-text" placeholder="CA">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="text" id="email" class="form-control" aria-describedby="example-text" placeholder="example@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="text" id="password" class="form-control" aria-describedby="example-text" placeholder="********">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Re-Enter Password</label>
+                        <input type="text" id="matchPassword" class="form-control" aria-describedby="example-text" placeholder="********">
+                    </div>
+                    <label for="example-text">Profile Picture</label>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroupFileAddon01">Upload Picture</span>
+                        </div>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                            <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                        </div>
+                    </div>
+                    <button id="submit" class="btn btn-primary float-right">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
