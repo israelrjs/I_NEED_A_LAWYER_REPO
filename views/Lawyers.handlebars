@@ -14,14 +14,16 @@
         <a class="nav-link" href="#">About</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">ASK A QUESTION</a>
+        <a class="nav-link" href="/askaquestion">ASK A QUESTION</a>
       </li>
     </ul>
 
-    <a class="btn btn-danger" data-toggle="collapse" href="/addtodirectory" role="button" aria-expanded="false" aria-controls="collapseExample">
+    <a class="btn btn-danger" data-toggle="collapse" href="/addtodirectory" role="button" aria-expanded="false"
+      aria-controls="collapseExample">
       I'm A Lawyer
     </a>
-    <a class="btn btn-warning" data-toggle="collapse" href="/lawyers/register" role="button" aria-expanded="false" aria-controls="collapseExample">
+    <a class="btn btn-warning" data-toggle="collapse" href="/lawyers/register" role="button" aria-expanded="false"
+      aria-controls="collapseExample">
       User Login
     </a>
   </div>
@@ -29,32 +31,30 @@
 
 {{#each lawyers}}
 <div class="container">
-  <div class="row">
-    <div class="col-8 offset-2">
-      <div class="card mt-4">
-        <div class="card-body">
-          <div>
-            <img src={{this.img}} alt="Profile Image" height="42" width="42">
-          </div>
-          <p>
-            <strong>Name</strong>: {{this.name}}</p>
-          <p>
-            <strong>Specializes In:</strong> {{this.type}}</p>
-          <p>
-            <strong>Zip Code</strong>: {{this.zipcode}}</p>
-          <p>
-            <p>
-              <strong>Phone Number</strong>: {{this.phoneNumber}}</p>
-            <p>
-              <p>
-                <strong>State</strong>: {{this.State}}</p>
-              <p>
 
-
-
-        </div>
+  <div class="card mt-4">
+    <div class="card-body">
+      <div>
+        <img id="lawyerpic" src={{this.img}} alt="Profile Image" height="42" width="42">
       </div>
+      <p>
+        <strong>Name</strong>: {{this.name}}</p>
+      <p>
+        <strong>Specializes In:</strong> {{this.type}}</p>
+      <p>
+        <strong>Zip Code</strong>: {{this.zipcode}}</p>
+      <p>
+        <p>
+          <strong>Phone Number</strong>: {{this.phoneNumber}}</p>
+        <p>
+          <p>
+            <strong>State</strong>: {{this.State}}</p>
+          <p>
+
+
+
     </div>
   </div>
+
 </div>
 {{/each}}

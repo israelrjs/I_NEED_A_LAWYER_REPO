@@ -27,7 +27,7 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false,
       validate: { notEmpty: { msg: "State Has To Be Specified" } }
     },
-    img: { type: DataTypes.BLOB },
+    img: { type: DataTypes.STRING },
     email: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -39,13 +39,5 @@ module.exports = function(sequelize, DataTypes) {
     password: { type: DataTypes.STRING }
   });
 
-  var client = sequelize.define("client", {
-    name: DataTypes.STRING,
-    type: DataTypes.TEXT,
-    zipcode: DataTypes.STRING,
-    phoneNumber: DataTypes.TEXT,
-    State: DataTypes.STRING,
-    img: DataTypes.BLOB
-  });
-  return client, lawyers;
+  return lawyers;
 };

@@ -35,3 +35,12 @@ nav {
   margin-top: 10px;
   height: 480px;
 }
+
+#lawyerpic {
+  width: 170px;
+  height: 250px;
+}
+.card.mt-4 {
+  width: 270px;
+  float: left;
+}

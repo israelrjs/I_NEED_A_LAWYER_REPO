@@ -3,7 +3,7 @@
     aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <a class="navbar-brand" href="/Lawyers">Find A LAWYER</a>
+  <a class="navbar-brand" href="/lawyers">Find A LAWYER</a>
 
   <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
@@ -14,55 +14,61 @@
         <a class="nav-link" href="#">About</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">ASK A QUESTION</a>
+        <a class="nav-link" href="/askaquestion">ASK A QUESTION</a>
       </li>
     </ul>
 
     <div class="g-signin2" data-onsuccess="onSignIn"></div>
-    <a class="btn btn-warning" data-toggle="collapse" href="/lawyers/register" role="button" aria-expanded="false" aria-controls="collapseExample">
+    <a class="btn btn-warning" data-toggle="collapse" href="/lawyers/register" role="button" aria-expanded="false"
+      aria-controls="collapseExample">
       User Login
     </a>
-    <a class="btn btn-danger" data-toggle="collapse" href="/addtodirectory" role="button" aria-expanded="false" aria-controls="collapseExample">
+    <a class="btn btn-danger" data-toggle="collapse" href="/addtodirectory" role="button" aria-expanded="false"
+      aria-controls="collapseExample">
       I'm A Lawyer
     </a>
   </div>
 </nav>
-<div id="home">
-  <div class="container">
-    <div class="row">
-      <div class="col-8 offset-2">
-        <h1>{{msg}}</h1>
+<form>
+  <div id="home">
+    <div class="container">
+      <div class="row">
+        <div class="col-8 offset-2">
+          <h1>{{msg}}</h1>
 
-        <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <label class="input-group-text" for="inputGroupSelect01">Legal Issue</label>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="inputGroupSelect01">Legal Issue</label>
+            </div>
+            <select class="custom-select" id="type">
+              <option selected>Choose...</option>
+              <option value="Work Injury">Work Injury</option>
+              <option value="Family">Family</option>
+              <option value="Employment">Employment & Labor</option>
+              <option value="4">Immigration</option>
+              <option value="5">Business</option>
+              <option value="6">Criminal</option>
+            </select>
           </div>
-          <select class="custom-select" id="inputGroupSelect01">
-            <option selected>Choose...</option>
-            <option value="1">Work Injury</option>
-            <option value="2">Family</option>
-            <option value="3">Employment & Labor</option>
-            <option value="4">Immigration</option>
-            <option value="5">Business</option>
-            <option value="6">Criminal</option>
-          </select>
-        </div>
 
-        <div class="input-group input-group-sm mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text" id="inputGroup-sizing-sm">ZipCode
+          <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-sm">ZipCode
 
-            </span>
+              </span>
+            </div>
+            <input id="zip" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
           </div>
-          <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+          <a id="search" class="btn btn-secondary btn-lg btn-block" data-toggle="collapse" role="button" aria-expanded="false"
+            aria-controls="collapseExample">
+            Search
+          </a>
         </div>
-
-        <button type="button" class="btn btn-secondary btn-lg btn-block"> Search</button>
       </div>
     </div>
-  </div>
+</form>
 
 
 
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="/js/index.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>

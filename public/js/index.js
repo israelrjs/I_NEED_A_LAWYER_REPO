@@ -5,12 +5,14 @@ var $type = $("#type");
 var $zipCode = $("#zipCode");
 var $phoneNumber = $("#phoneNumber");
 var $State = $("#State");
-var $IMG = $("#inputGroupFile01");
+var $IMG = $("#img");
 var $password = $("#password");
 var $email = $("#email");
 var $matchPassword = $("#matchPassword");
 var $submitBtn = $("#submit");
 var $Ebox = $("#errors");
+var $Search = $("#search");
+var $zip = $("#zip");
 
 var API = {
   saveLawyer: function(lawyers) {
@@ -46,13 +48,13 @@ var handleFormSubmit = function(event) {
     zipcode: $zipCode.val().trim(),
     phoneNumber: $phoneNumber.val().trim(),
     State: $State.val().trim(),
-    img: $IMG,
+    img: $IMG.val().trim(),
     email: $email.val().trim(),
     password: $password.val().trim()
   };
 
   if (!lawyer.name) {
-    alert("You must enter an example text and description!");
+    alert("No Text fields must be left Empty!");
     return;
   }
 
@@ -66,7 +68,18 @@ var handleFormSubmit = function(event) {
   $email.val("");
   $password.val("");
   $matchPassword.val("");
+  $IMG.val("");
 };
 
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
+
+$Search.on("click", function() {
+  var searchType = $("#type").val();
+  console.log(searchType);
+
+  $.get("/test/" + searchType, function(data) {
+    // log the data to our console
+    console.log(data);
+  });
+});
